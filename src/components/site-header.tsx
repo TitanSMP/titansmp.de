@@ -99,6 +99,22 @@ export default function SiteHeader({
               About
             </a>
             <a
+              href="/docs/rules"
+              className={`text-foreground/80 transition-all duration-300 hover:text-foreground focus-visible:outline-none focus-visible:underline ${
+                isCompact ? "text-sm" : "text-base"
+              }`}
+            >
+              Rules
+            </a>
+            <a
+              href="/docs"
+              className={`text-foreground/80 transition-all duration-300 hover:text-foreground focus-visible:outline-none focus-visible:underline ${
+                isCompact ? "text-sm" : "text-base"
+              }`}
+            >
+              Docs
+            </a>
+            <a
               href="/contact"
               className={`text-foreground/80 transition-all duration-300 hover:text-foreground focus-visible:outline-none focus-visible:underline ${
                 isCompact ? "text-sm" : "text-base"

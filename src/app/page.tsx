@@ -54,8 +54,15 @@ export default function Page() {
 
           <div className="mt-6 flex flex-wrap gap-3">
             <Link
+              href="/docs/rules"
+              className="inline-flex items-center gap-2 rounded-base border border-border/30 bg-foreground px-5 py-2.5 text-sm font-heading text-background shadow-md transition-transform hover:-translate-y-0.5"
+            >
+              Rules
+              <ArrowUpRight className="size-4" />
+            </Link>
+            <Link
               href="/docs/how-to-join"
-              className="inline-flex items-center gap-2 rounded-base border border-border/30 bg-foreground px-4 py-2 text-sm font-heading text-background shadow-sm transition-transform hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 rounded-base border border-border/30 bg-secondary-background px-4 py-2 text-sm font-heading text-foreground shadow-sm transition-transform hover:-translate-y-0.5"
             >
               How to join?
               <ArrowUpRight className="size-4" />
