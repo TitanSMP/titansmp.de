@@ -15,9 +15,14 @@ const socialLinks = [
     label: "GitHub",
   },
   {
-    href: "https://modrinth.com/organization/5c3YLzt7",
+    href: "https://modrinth.com/organization/titansmp",
     iconName: "modrinth",
     label: "Modrinth",
+  },
+  {
+    href: "https://discord.gg/88k3eUvADh",
+    iconName: "discord-color",
+    label: "Discord",
   },
 ];
 

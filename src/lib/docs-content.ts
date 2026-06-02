@@ -1,21 +1,27 @@
-import GettingStarted from "@/content/docs/getting-started.mdx";
-import HowToJoin from "@/content/docs/how-to-join.mdx";
-import Rules from "@/content/docs/rules.mdx";
-import Faq from "@/content/docs/faq.mdx";
+import docs from "@/content/docs/docs.json";
 
-const docModules = {
-  "getting-started": GettingStarted,
-  "how-to-join": HowToJoin,
-  "rules": Rules,
-  "faq": Faq,
-} as const satisfies Record<string, React.ComponentType>;
+type DocEntry = {
+  slug: string;
+  title?: string;
+  file?: string;
+};
 
-export type DocSlug = keyof typeof docModules;
+const docEntries = docs as DocEntry[];
 
-export function getDocModule(slug: string): React.ComponentType | undefined {
-  return docModules[slug as DocSlug];
+export type DocSlug = (typeof docEntries)[number]["slug"];
+
+export async function getDocModule(
+  slug: string,
+): Promise<React.ComponentType | undefined> {
+  const entry = docEntries.find((doc) => doc.slug === slug);
+
+  if (!entry) return undefined;
+
+  const fileName = entry.file ?? `${entry.slug}.mdx`;
+  const module = await import(`@/content/docs/${fileName}`);
+  return module.default as React.ComponentType;
 }
 
 export function getAllDocSlugs(): DocSlug[] {
-  return Object.keys(docModules) as DocSlug[];
+  return docEntries.map((doc) => doc.slug) as DocSlug[];
 }

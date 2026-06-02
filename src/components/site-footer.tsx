@@ -9,8 +9,6 @@ export default async function SiteFooter() {
   const rootDomain = process.env.NEXT_PUBLIC_URL || "https://henrymeyer.de";
   const toMainDomain = (path: string) =>
     isSubsiteDomain ? `${rootDomain}${path}` : path;
-  const imprintUrl = "https://henrymeyer.de/legal/imprint";
-  const privacyUrl = "https://henrymeyer.de/legal/privacy";
 
   return (
     <footer className="mt-8 border-t border-border/30 bg-secondary-background ml-[calc(50%-50vw)] mr-[calc(50%-50vw)]">
@@ -77,14 +75,38 @@ export default async function SiteFooter() {
             <h3 className="mb-3 text-sm font-heading">Legal</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a className="underline underline-offset-2" href={imprintUrl}>
-                  Imprint
-                </a>
+                {isSubsiteDomain ? (
+                  <a
+                    className="underline underline-offset-2"
+                    href={toMainDomain("/legal/imprint")}
+                  >
+                    Imprint
+                  </a>
+                ) : (
+                  <Link
+                    className="underline underline-offset-2"
+                    href={toMainDomain("/legal/imprint")}
+                  >
+                    Imprint
+                  </Link>
+                )}
               </li>
               <li>
-                <a className="underline underline-offset-2" href={privacyUrl}>
-                  Privacy Policy
-                </a>
+                {isSubsiteDomain ? (
+                  <a
+                    className="underline underline-offset-2"
+                    href={toMainDomain("/legal/privacy")}
+                  >
+                    Privacy Policy
+                  </a>
+                ) : (
+                  <Link
+                    className="underline underline-offset-2"
+                    href={toMainDomain("/legal/privacy")}
+                  >
+                    Privacy Policy
+                  </Link>
+                )}
               </li>
               <li>
                 {isSubsiteDomain ? (
@@ -128,7 +150,7 @@ export default async function SiteFooter() {
               <li>
                 <a
                   className="underline underline-offset-2"
-                  href="https://modrinth.com/organization/5c3YLzt7"
+                  href="https://modrinth.com/organization/titansmp"
                   target="_blank"
                 >
                   Modrinth
@@ -150,6 +172,16 @@ export default async function SiteFooter() {
         <div className="mt-4 rounded-base border border-border/30 bg-main px-4 py-3 text-sm text-main-foreground">
           Based on HenryMM Website © 2025 - 2026 by Henry Meyer. Licensed under
           GPL-3.0.
+        </div>
+        <div className="mt-3 rounded-base border border-border/30 bg-background px-4 py-2 text-xs text-foreground/70 md:text-sm">
+          Developed with 🤍 by{" "}
+          <a
+            className="underline underline-offset-2"
+            href="https://henrymeyer.de"
+          >
+            Henry Meyer
+          </a>
+          . Managed with 🤍 by Matti and Joel.
         </div>
       </div>
     </footer>

@@ -33,7 +33,7 @@ export default async function DocPage({
 
   if (!entry) notFound();
 
-  const Content = getDocModule(slug);
+  const Content = await getDocModule(slug);
 
   if (!Content) notFound();
 

@@ -37,7 +37,7 @@ export default function NotFound() {
               className="inline-flex items-center gap-2 rounded-base border border-border/30 bg-background px-3 py-1.5 text-sm font-heading text-foreground shadow-sm transition-opacity hover:opacity-80"
             >
               <Mail className="size-4" />
-              Contact me
+              Contact us
             </Link>
           </div>
         </section>
@@ -53,10 +53,10 @@ export default function NotFound() {
             </p>
             <div className="flex flex-col gap-2">
               <Link
-                href="/#projects"
+                href="/docs"
                 className="inline-flex items-center justify-between rounded-base border border-border/30 bg-background px-3 py-2 text-sm font-heading shadow-sm transition-opacity hover:opacity-80"
               >
-                Featured projects
+                Docs
                 <span
                   aria-hidden="true"
                   className="font-mono text-xs text-foreground/70"
@@ -76,8 +76,8 @@ export default function NotFound() {
                   {"->"}
                 </span>
               </Link>
-              <a
-                href="https://henrymeyer.de/legal/imprint"
+              <Link
+                href="/legal/imprint"
                 className="inline-flex items-center justify-between rounded-base border border-border/30 bg-background px-3 py-2 text-sm font-heading shadow-sm transition-opacity hover:opacity-80"
               >
                 Imprint
@@ -87,7 +87,7 @@ export default function NotFound() {
                 >
                   {"->"}
                 </span>
-              </a>
+              </Link>
             </div>
           </article>
 

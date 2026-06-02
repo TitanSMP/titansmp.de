@@ -54,10 +54,10 @@ export default function Page() {
 
           <div className="mt-6 flex flex-wrap gap-3">
             <Link
-              href="/contact"
+              href="/docs/how-to-join"
               className="inline-flex items-center gap-2 rounded-base border border-border/30 bg-foreground px-4 py-2 text-sm font-heading text-background shadow-sm transition-transform hover:-translate-y-0.5"
             >
-              Join the Network
+              How to join?
               <ArrowUpRight className="size-4" />
             </Link>
             <Link

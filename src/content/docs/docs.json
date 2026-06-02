@@ -1,0 +1,11 @@
+[
+  { "slug": "getting-started", "title": "Getting Started" },
+  { "slug": "how-to-join", "title": "How to Join" },
+  { "slug": "commands", "title": "Commands" },
+  { "slug": "rules", "title": "Rules" },
+  { "slug": "teams", "title": "Teams" },
+  { "slug": "economy", "title": "Economy" },
+  { "slug": "crates", "title": "Crates" },
+  { "slug": "ranks", "title": "Ranks" },
+  { "slug": "faq", "title": "FAQ" }
+]

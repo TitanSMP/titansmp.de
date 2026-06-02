@@ -1,7 +1,11 @@
 import createMDX from "@next/mdx";
 import type { NextConfig } from "next";
 
-const withMDX = createMDX();
+const withMDX = createMDX({
+  options: {
+    remarkPlugins: ["remark-gfm"],
+  },
+});
 
 const nextConfig: NextConfig = {
   pageExtensions: ["ts", "tsx", "md", "mdx"],
@@ -9,20 +13,6 @@ const nextConfig: NextConfig = {
     resolveAlias: {
       "@": "./src",
     },
-  },
-  async redirects() {
-    return [
-      {
-        source: "/legal/imprint",
-        destination: "https://henrymeyer.de/legal/imprint",
-        permanent: true,
-      },
-      {
-        source: "/legal/privacy",
-        destination: "https://henrymeyer.de/legal/privacy",
-        permanent: true,
-      },
-    ];
   },
 };
 

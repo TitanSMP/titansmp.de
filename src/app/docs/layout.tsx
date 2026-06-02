@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { docsConfig } from "@/lib/docs-config";
-import SiteFooter from "@/components/site-footer";
+import DocsFooter from "@/components/docs-footer";
 
 export default function DocsLayout({
   children,
@@ -38,10 +38,10 @@ export default function DocsLayout({
       </aside>
 
       <main className="min-w-0 flex-1">
-        <article className="prose prose-sm max-w-none dark:prose-invert prose-headings:font-heading prose-headings:font-normal prose-a:text-main-foreground prose-code:rounded-base prose-code:bg-main/10 prose-code:px-1.5 prose-code:py-0.5">
+        <article className="prose max-w-none leading-relaxed dark:prose-invert prose-headings:font-heading prose-headings:font-normal prose-headings:leading-tight prose-headings:mt-8 prose-headings:mb-3 prose-p:leading-relaxed prose-ul:my-4 prose-ol:my-4 prose-li:my-1 prose-li:leading-relaxed prose-hr:my-8 prose-hr:border-border/40 prose-a:text-main-foreground prose-code:rounded-base prose-code:bg-main/10 prose-code:px-1.5 prose-code:py-0.5">
           {children}
         </article>
-        <SiteFooter />
+        <DocsFooter />
       </main>
     </div>
   );
