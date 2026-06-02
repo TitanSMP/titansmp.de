@@ -10,18 +10,18 @@ const showIp = false;
 // Replace these with real Minecraft screenshots in /public/assets.
 const galleryImages = [
   {
-    src: "/assets/titansmp-hero-01.jpg",
-    alt: "TitanSMP overworld base with a sunrise",
+    src: "/highlights/crates.png",
+    alt: "TitanSMP crates with custom models and particle effects",
     tilt: "rotate-2",
   },
   {
-    src: "/assets/titansmp-hero-02.jpg",
-    alt: "TitanSMP lobby hub with multiple portals",
+    src: "/highlights/duell.png",
+    alt: "TitanSMP duel arena",
     tilt: "-rotate-2",
   },
   {
-    src: "/assets/titansmp-hero-03.jpg",
-    alt: "TitanSMP community build on a cliffside",
+    src: "/highlights/all.png",
+    alt: "TitanSMP lobby hub",
     tilt: "rotate-1",
   },
 ];
@@ -93,7 +93,7 @@ export default function Page() {
       </section>
 
       <section className="mb-10 rounded-base border border-border/30 bg-secondary-background p-6 shadow-sm md:p-8">
-        <SectionHeading index="02" title="Featured Worlds" />
+        <SectionHeading index="02" title="Highlights" />
         <p className="mb-6 max-w-2xl text-sm leading-relaxed text-foreground/70 md:text-base">
           Exciting highlights from the closed beta.
         </p>
