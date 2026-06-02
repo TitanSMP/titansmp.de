@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/connect",
+      "destination": "/links",
+      "permanent": true
+    }
+  ]
+}
