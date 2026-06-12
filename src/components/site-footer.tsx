@@ -187,14 +187,23 @@ export default async function SiteFooter() {
         </div>
 
         <div className="mt-4 rounded-base border border-border/30 bg-main px-4 py-3 text-sm text-main-foreground">
-          Based on HenryMM Website © 2025 - 2026 by Henry Meyer. Licensed under
-          GPL-3.0.
+          <p>© 2026 TitanSMP. Code licensed under GPL-3.0.</p>
+          <p>
+            <a
+              className="underline underline-offset-2"
+              href="https://henrymeyer.de/?utm_source=titansmp&utm_medium=copyright_credit&utm_campaign=website"
+              target="_blank"
+            >
+              Based on Henry Meyer Website
+            </a>
+          </p>
         </div>
         <div className="mt-3 rounded-base border border-border/30 bg-background px-4 py-2 text-xs text-foreground/70 md:text-sm">
           Developed with 🤍 by{" "}
           <a
             className="underline underline-offset-2"
-            href="https://henrymeyer.de"
+            href="https://henrymeyer.de/?utm_source=titansmp&utm_medium=made_credit&utm_campaign=website"
+            target="_blank"
           >
             Henry Meyer
           </a>
